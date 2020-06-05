@@ -18,6 +18,7 @@
 
 package org.apache.hudi.utilities.sources;
 
+import org.apache.hudi.SchemaConverters;
 import org.apache.hudi.common.config.TypedProperties;
 import org.apache.hudi.common.util.Option;
 import org.apache.hudi.common.util.collection.Pair;
@@ -28,8 +29,8 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.DataFrameReader;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
+
 import org.apache.spark.sql.SparkSession;
-import org.apache.spark.sql.avro.SchemaConverters;
 import org.apache.spark.sql.types.StructType;
 
 import java.util.Arrays;
