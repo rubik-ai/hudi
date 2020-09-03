@@ -28,7 +28,7 @@ import org.apache.avro.Schema.Type._
 import org.apache.avro.generic.GenericData.{Fixed, Record}
 import org.apache.avro.generic.{GenericData, GenericFixed, GenericRecord}
 import org.apache.spark.sql.Row
-import org.apache.spark.sql.avro.{IncompatibleSchemaException, SchemaConverters}
+import org.apache.spark.sql.avro.{IncompatibleSchemaException}
 import org.apache.spark.sql.catalyst.expressions.GenericRow
 import org.apache.spark.sql.catalyst.util.DateTimeUtils
 import org.apache.spark.sql.types._

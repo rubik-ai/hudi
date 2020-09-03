@@ -22,7 +22,6 @@ import org.apache.hudi.common.model.HoodieKey
 import org.apache.avro.Schema
 import org.apache.hudi.avro.HoodieAvroUtils
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.avro.SchemaConverters
 import org.apache.spark.sql.catalyst.encoders.RowEncoder
 import org.apache.spark.sql.types._
 import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
