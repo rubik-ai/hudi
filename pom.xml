@@ -518,6 +518,7 @@
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>io.prometheus</groupId>
@@ -528,11 +529,13 @@
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient_dropwizard</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient_pushgateway</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
 
       <dependency>

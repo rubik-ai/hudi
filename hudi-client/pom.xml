@@ -129,6 +129,7 @@
     <dependency>
       <groupId>io.prometheus</groupId>
       <artifactId>simpleclient</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.prometheus</groupId>
@@ -137,10 +138,12 @@
     <dependency>
       <groupId>io.prometheus</groupId>
       <artifactId>simpleclient_dropwizard</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.prometheus</groupId>
       <artifactId>simpleclient_pushgateway</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
