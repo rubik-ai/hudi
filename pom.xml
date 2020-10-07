@@ -336,6 +336,7 @@
             <excludes>
               <exclude>NOTICE</exclude>
               <exclude>DISCLAIMER</exclude>
+              <exclude>**/*.iml</exclude>
               <exclude>**/.*</exclude>
               <exclude>**/*.json</exclude>
               <exclude>**/*.log</exclude>

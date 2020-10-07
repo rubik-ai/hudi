@@ -38,6 +38,8 @@ public enum WriteOperationType {
   // delete
   DELETE("delete"),
   BOOTSTRAP("bootstrap"),
+  // insert overwrite
+  INSERT_OVERWRITE("insert_overwrite"),
   // used for old version
   UNKNOWN("unknown");
 
@@ -66,9 +68,19 @@ public enum WriteOperationType {
         return BULK_INSERT_PREPPED;
       case "delete":
         return DELETE;
+      case "insert_overwrite":
+        return INSERT_OVERWRITE;
       default:
         throw new HoodieException("Invalid value of Type.");
     }
+  }
+
+  /**
+   * Getter for value.
+   * @return string form of WriteOperationType
+   */
+  public String value() {
+    return value;
   }
 
   public static boolean isChangingRecords(WriteOperationType operationType) {
