@@ -299,7 +299,12 @@ object AvroConversionHelper {
       case TimestampType => (item: Any) =>
         // Convert time to microseconds since spark-avro by default converts TimestampType to
         // Avro Logical TimestampMicros
-        Option(item).map(_.asInstanceOf[Timestamp].getTime * 1000).orNull
+        // Option(item).map(_.asInstanceOf[Timestamp].getTime * 1000).orNull
+        // todo: Metis: Remove *100 and forcefully keeping it to millis. This will force hudi
+        // along with the change in SchemaConverters.scala
+        // to write timestamp in timestamp_millis instead of micros. Since presto is having
+        // problem dealing with timestamp micros.
+        Option(item).map(_.asInstanceOf[Timestamp].getTime).orNull
       case DateType => (item: Any) =>
         Option(item).map(_.asInstanceOf[Date].toLocalDate.toEpochDay.toInt).orNull
       case ArrayType(elementType, _) =>

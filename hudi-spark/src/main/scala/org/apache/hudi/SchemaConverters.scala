@@ -148,8 +148,11 @@ object SchemaConverters {
       case DateType =>
         LogicalTypes.date().addToSchema(builder.intType())
       case TimestampType =>
-//        LogicalTypes.timestampMicros().addToSchema(builder.longType())
-        builder.longType()
+        // todo: Metis: Forcefully keeping it to millis. This will force hudi
+        // along with the change in AvroConversionHelper.scala
+        // to write timestamp in timestamp_millis instead of micros. Since presto is having
+        // problem dealing with timestamp micros.
+        LogicalTypes.timestampMillis().addToSchema(builder.longType())
       case FloatType => builder.floatType()
       case DoubleType => builder.doubleType()
       case StringType => builder.stringType()
