@@ -320,5 +320,6 @@
   <modules>
     <module>hudi-client-common</module>
     <module>hudi-spark-client</module>
+    <module>hudi-flink-client</module>
   </modules>
 </project>
