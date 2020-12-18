@@ -102,7 +102,7 @@
     <hive.version>2.3.1</hive.version>
     <hive.exec.classifier>core</hive.exec.classifier>
     <metrics.version>4.1.1</metrics.version>
-    <prometheus.version>0.8.0</prometheus.version>
+    <prometheus.version>0.8.1</prometheus.version>
     <http.version>4.4.1</http.version>
     <spark.version>2.4.4</spark.version>
     <flink.version>1.11.2</flink.version>
@@ -345,6 +345,7 @@
             <excludes>
               <exclude>NOTICE</exclude>
               <exclude>DISCLAIMER</exclude>
+              <exclude>**/*.iml</exclude>
               <exclude>**/.*</exclude>
               <exclude>**/*.json</exclude>
               <exclude>**/*.log</exclude>
@@ -547,6 +548,7 @@
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>io.prometheus</groupId>
@@ -557,11 +559,13 @@
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient_dropwizard</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>io.prometheus</groupId>
         <artifactId>simpleclient_pushgateway</artifactId>
         <version>${prometheus.version}</version>
+        <scope>provided</scope>
       </dependency>
 
       <dependency>
